@@ -1,0 +1,32 @@
+{
+
+  "manifest_version": 2,
+  "name": "Zen Blocker",
+  "description": "Blocks sites for given time period, For the self motivated people who dont want to get distracted duing work hours",
+  "version": "2.6",
+
+  "homepage_url": "https://github.com/genaro14/siteBlocker-Firefox",
+  "icons": {
+    "32": "icons/logos_32.png",
+    "48": "icons/logos_48.png",
+    "64": "icons/logos_64.png"
+  },
+
+  "background": {
+    "scripts": ["stopIt.js"]
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "notifications",
+    "storage"
+  ]
+  
+}
