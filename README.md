@@ -1,0 +1,1 @@
+# siteBlocker-Firefox
