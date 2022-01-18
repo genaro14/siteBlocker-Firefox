@@ -3,7 +3,7 @@ browser.webRequest.onBeforeRequest.addListener(
   handleHTTPRequest,
   {urls:[
 	"*://*.facebook.com/*", 		//regexp or specific link
-   	"*://*.mercadolibre.com.*/*",
+   	"*://*.mercadolibre.com.ar/*",
     "*://*.reddit.com/*",
 	"*://*.instagram.com/*",
 	"*://*.cuevana3.io/*"
@@ -34,7 +34,7 @@ function handleHTTPRequest(details) {
 		gettingItem.then((res) => {
 			if(res && res.blockHrsTSL) {
 				let fromTime = res.blockHrsTSL.fromHrs || 0;
-				let toTime = res.blockHrsTSL.toHrs || 0;
+				let toTime = res.blockHrsTSL.toHrs || 24;
 
 				if(fromTime == 0 && toTime == 0) resolve(false);
 
